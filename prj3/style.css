@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    /*display: flex;
+     justify-content: center;
+    align-items: center;
+    text-align: center; */
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button__open {
+    /* height: 30px;
+    width: 100px; */
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    /* text-align: center; */
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 300ms;
+}
+
+.model__background {
+    position: fixed;   
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    width: 100%;
+    height: 100%;
+}
+
+.model {
+
+    
+}
+
+.model__inner {
+    width: 450px;
+    /* height: auto; */
+    position: relative;
+    top: 60%;
+    background: #fff;
+    margin: 100px auto;
+    border-radius: 5px;
+    animation: modelShow 0.3s linear;
+    /* z-index: 2; */
+
+}
+.model__header {
+    background-color: #e26e70;
+    left: 0;
+    justify-content: space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    align-items: center;
+    font-size: 16px;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+}
+
+.model__body {
+    padding: 15px;
+}
+
+.model__body h2 {
+    color: #e26e70 ;
+    /* padding: 10px; */
+    margin: 0 0 10px 0;
+}
+.model__body p {
+    /* padding-left: 10px ; */
+    font-size: 14px;
+    
+}
+ .button__open:hover{
+    cursor: pointer;
+    background: rgb(255, 255, 255,0.6) ;
+}
+
+
+
+
+/*.model__inner .bxs-x-square {
+    float: right;
+    margin-top: -15px;
+} */ 
+
+.model__footer {
+    padding: 15px;
+    text-align: right;
+}
+
+.model__footer button {
+    /* float: right; */
+    position: relative;
+    right: 0;
+    padding: 10px 20px;
+    background-color: #e26e70;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+}
+.model__footer button:hover, .model__inner .bxs-x-square:hover   {
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes modelShow {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}
